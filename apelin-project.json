@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "projectID": "16eba7e3-00c0-42a5-8057-590cda755284",
+  "kind": "workspace",
+  "buildSystem": "external",
+  "external": {
+    "script": "build.sh",
+    "interpreter": "sh",
+    "arguments": []
+  },
+  "displayName": "TokenBalance",
+  "autoName": false
+}

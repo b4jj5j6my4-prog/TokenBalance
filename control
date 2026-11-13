@@ -1,0 +1,8 @@
+Package: com.shijian.tokenbalance
+Name: Token 余额浮窗
+Version: 1.2.2
+Architecture: iphoneos-arm64e
+Description: 自动识别常见第三方中转站余额协议，并在全局浮窗中显示余额、总额与已用额度。
+Author: b4jj5j6my4-prog
+Section: Tweaks
+Depends: mobilesubstrate, roothide, preferenceloader

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>title</key><string>Token 余额浮窗</string>
+    <key>items</key>
+    <array>
+        <dict>
+            <key>cell</key><string>PSGroupCell</string>
+            <key>label</key><string>浮窗</string>
+            <key>footerText</key><string>拖动浮窗四角可自由缩放，拖动中间区域可移动；轻点折叠，长按快速配置。开启固定后将禁止移动和缩放。锁屏时浮窗始终隐藏。</string>
+        </dict>
+        <dict>
+            <key>cell</key><string>PSSwitchCell</string>
+            <key>label</key><string>启用浮窗</string>
+            <key>key</key><string>enabled</string>
+            <key>defaults</key><string>com.shijian.tokenbalance</string>
+            <key>default</key><true/>
+        </dict>
+        <dict>
+            <key>cell</key><string>PSSwitchCell</string>
+            <key>label</key><string>固定浮窗</string>
+            <key>key</key><string>locked</string>
+            <key>defaults</key><string>com.shijian.tokenbalance</string>
+            <key>default</key><false/>
+        </dict>
+        <dict>
+            <key>cell</key><string>PSLinkListCell</string>
+            <key>label</key><string>浮窗大小</string>
+            <key>detail</key><string>PSListItemsController</string>
+            <key>key</key><string>windowScale</string>
+            <key>defaults</key><string>com.shijian.tokenbalance</string>
+            <key>default</key><real>1.0</real>
+            <key>validValues</key>
+            <array>
+                <real>0.75</real><real>0.9</real><real>1.0</real><real>1.1</real><real>1.25</real><real>1.5</real>
+            </array>
+            <key>validTitles</key>
+            <array>
+                <string>75%</string><string>90%</string><string>100%</string><string>110%</string><string>125%</string><string>150%</string>
+            </array>
+        </dict>
+        <dict>
+            <key>cell</key><string>PSEditTextCell</string>
+            <key>label</key><string>刷新周期（秒）</string>
+            <key>key</key><string>refreshInterval</string>
+            <key>defaults</key><string>com.shijian.tokenbalance</string>
+            <key>default</key><integer>60</integer>
+            <key>keyboard</key><string>numberPad</string>
+        </dict>
+        <dict>
+            <key>cell</key><string>PSGroupCell</string>
+            <key>label</key><string>接口</string>
+            <key>footerText</key><string>填写 HTTPS 平台根地址会自动探测常见余额协议；填写带路径的完整接口则仅请求该接口。认证同时兼容 Bearer、x-api-key 和 x-goog-api-key，并禁止跨主机重定向。</string>
+        </dict>
+        <dict>
+            <key>cell</key><string>PSEditTextCell</string>
+            <key>label</key><string>平台地址或接口 URL</string>
+            <key>key</key><string>endpoint</string>
+            <key>defaults</key><string>com.shijian.tokenbalance</string>
+            <key>default</key><string></string>
+            <key>keyboard</key><string>URL</string>
+            <key>autoCaps</key><string>none</string>
+            <key>autoCorrection</key><string>no</string>
+        </dict>
+        <dict>
+            <key>cell</key><string>PSEditTextCell</string>
+            <key>label</key><string>API Key</string>
+            <key>key</key><string>apiKey</string>
+            <key>defaults</key><string>com.shijian.tokenbalance</string>
+            <key>default</key><string></string>
+            <key>secure</key><true/>
+            <key>autoCaps</key><string>none</string>
+            <key>autoCorrection</key><string>no</string>
+        </dict>
+        <dict>
+            <key>cell</key><string>PSGroupCell</string>
+            <key>label</key><string>JSON 字段路径</string>
+            <key>footerText</key><string>仅在自动识别失败时使用。支持字典键和数组下标混合点分路径，例如 data.items.0.balance。</string>
+        </dict>
+        <dict>
+            <key>cell</key><string>PSEditTextCell</string>
+            <key>label</key><string>剩余额度</string>
+            <key>key</key><string>availablePath</string>
+            <key>defaults</key><string>com.shijian.tokenbalance</string>
+            <key>default</key><string>total_available</string>
+            <key>autoCaps</key><string>none</string>
+            <key>autoCorrection</key><string>no</string>
+        </dict>
+        <dict>
+            <key>cell</key><string>PSEditTextCell</string>
+            <key>label</key><string>总额度</string>
+            <key>key</key><string>totalPath</string>
+            <key>defaults</key><string>com.shijian.tokenbalance</string>
+            <key>default</key><string>total_granted</string>
+            <key>autoCaps</key><string>none</string>
+            <key>autoCorrection</key><string>no</string>
+        </dict>
+        <dict>
+            <key>cell</key><string>PSEditTextCell</string>
+            <key>label</key><string>已用额度</string>
+            <key>key</key><string>usedPath</string>
+            <key>defaults</key><string>com.shijian.tokenbalance</string>
+            <key>default</key><string>total_used</string>
+            <key>autoCaps</key><string>none</string>
+            <key>autoCorrection</key><string>no</string>
+        </dict>
+    </array>
+</dict>
+</plist>
