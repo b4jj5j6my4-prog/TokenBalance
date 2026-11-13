@@ -53,8 +53,6 @@ make clean
 make package FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=roothide
 ```
 
-Apelin 工作区可通过项目构建功能运行 `build.sh`。该脚本只接受 RootHide 构建目标，并把唯一的 deb 写入 Apelin 提供的输出目录。
-
 ## 安装
 
 安装生成的 `iphoneos-arm64e` 软件包后重启 SpringBoard。随后可以在 iOS 设置中配置接口与显示方式，并在控制中心添加 TokenBalance 模块。
@@ -65,7 +63,6 @@ Apelin 工作区可通过项目构建功能运行 `build.sh`。该脚本只接�
 - `ShijianTokenBalancePrefs/`：PreferenceLoader 设置面板
 - `ShijianTokenBalanceCC/`：控制中心开关模块
 - `layout/`：PreferenceLoader 入口
-- `build.sh`：Apelin 外部构建入口
 
 ## 许可证
 

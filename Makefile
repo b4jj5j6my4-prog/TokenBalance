@@ -4,7 +4,7 @@ include $(THEOS)/makefiles/common.mk
 
 TWEAK_NAME = ShijianTokenBalance
 ShijianTokenBalance_FILES = Tweak.xm
-ShijianTokenBalance_CFLAGS = -fobjc-arc -Wall -Wextra -DAPELIN_BUILD_ID=\"$(APELIN_BUILD_ID)\"
+ShijianTokenBalance_CFLAGS = -fobjc-arc -Wall -Wextra
 ShijianTokenBalance_FRAMEWORKS = UIKit Foundation
 ShijianTokenBalance_LIBRARIES = roothide
 

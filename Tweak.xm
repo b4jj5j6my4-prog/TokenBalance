@@ -5,10 +5,6 @@
 #import <notify.h>
 #import <sys/stat.h>
 
-#ifndef APELIN_BUILD_ID
-#define APELIN_BUILD_ID "theos"
-#endif
-
 static NSString *const ShijianTokenBalanceConfigFile = @"/var/mobile/Library/Preferences/com.shijian.tokenbalance.plist";
 static const char *ShijianTokenBalanceChangedNotification = "com.shijian.tokenbalance/changed";
 
@@ -635,7 +631,7 @@ static NSDictionary *ShijianTokenBalanceParsedResult(id json, NSDictionary *conf
 @end
 
 __attribute__((constructor)) static void ShijianTokenBalanceInitialize(void) {
-    os_log(ShijianTokenBalanceLog(), "ApelinLoaded %{public}s", APELIN_BUILD_ID);
+    os_log(ShijianTokenBalanceLog(), "TokenBalance loaded");
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [[ShijianTokenBalanceController sharedController] start];
     });
